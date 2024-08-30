@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int num;
+    scanf("%d",&num);
+    // printf("%d",num);
+    printf("value of num =%d",num);
+
+    return 0;
+}
+
+
+
+
+
+
+#include <stdio.h>
+
+// int main() {
+//     float marks;
+//     scanf("%f",&marks);
+//     if (marks>15){
+//         printf("pass");
+//     }else if (marks ==15){
+//         printf("retake");
+//     }else {
+//         printf("fail");
+//     }
+    
+
+//     return 0;
+// }
