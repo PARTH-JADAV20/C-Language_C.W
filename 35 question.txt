@@ -1,0 +1,699 @@
+{1}
+#include <stdio.h>
+
+int main() {
+    
+    printf("hello world");
+
+    return 0;
+}
+
+
+{2}
+#include <stdio.h>
+
+int main() {
+    
+    int num1;
+    int num2;
+    printf("Enter no.1 : ");
+    scanf("%d",&num1);
+    printf("Enter no.2 : ");
+    scanf("%d",&num2);
+    
+    printf("Total : %d",num1+num2);
+
+    return 0;
+}
+
+
+{3}
+#include <stdio.h>
+
+int main() {
+    int num1=20;
+    int num2=30;
+    int large;
+    
+    if (num1>num2){
+        large=num1;
+    }else {
+        large=num2;
+    }
+    printf("%d",large);
+
+    return 0;
+}
+
+
+{4}
+#include <stdio.h>
+
+int main() {
+    int num1=21;
+    
+    
+    if (num1%2==0){
+        printf("%s","even");
+    }else {
+        printf("odd");
+    }
+    
+    
+
+    return 0;
+}
+
+{5}
+#include <stdio.h>
+
+int main() {
+    int num1=5;
+    int fact=1;
+    int i;
+    for(i=1;i<=num1;i++){
+        fact=fact*i;
+    }
+   
+    printf("%d",fact);
+    return 0;
+}
+
+{6}
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int N = 86;
+    char str[20];
+    char rnum[10];
+    sprintf(str, "%d", N);
+
+    for (int i=0;i<strlen(str);i++){
+        rnum[i]=str[strlen(str)-i-1];
+        
+    }
+     rnum[strlen(str)] = '\0';
+     printf("%s\n",rnum);
+}
+
+
+{7}
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int N = 686;
+    char str[20];
+    char rnum[10];
+    sprintf(str, "%d", N);
+
+    for (int i=0;i<strlen(str);i++){
+        rnum[i]=str[strlen(str)-i-1];
+        
+    }
+     rnum[strlen(str)] = '\0';
+     if (strcmp(str,rnum)==0){
+         printf("prindrome");
+     }else {
+         printf("not palindrome")
+     }
+}
+
+
+{8}
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int num;
+    scanf("%d", &num);
+    char str[10];
+    sprintf(str,"%d",num);
+    int count=0;
+    int i;
+    for (i=0;i<strlen(str);i++){
+        count=count+(str[i]-'0');
+    }
+    printf("%d",count);
+    
+    
+    return 0;
+}
+
+
+{9}
+#include <stdio.h>
+
+int main() {
+    
+    int num1;
+    printf("Enter no. : ");
+    scanf("%d",&num1);
+    int count=0;
+    int i;
+    
+    for (i=2;i<num1;i++){
+        if (num1%i==0){
+            count=count+1;
+        }
+    }
+    if (count>0){
+        printf("notprime");
+    }else {
+        printf("prime");
+    }
+   
+
+    return 0;
+}
+
+{10}
+#include <stdio.h>
+
+int main() {
+    int num=5;
+    int n1=0;
+    int n2=1;
+    int nexterm;
+    int i;
+    
+    printf("%d\n",n1);
+    printf("%d\n",n2);
+    for (i=0;i<num-2;i++){
+        nexterm=n1+n2;
+        n1=n2;
+        n2=nexterm;
+        printf("%d\n",nexterm);
+    }
+    
+    return 0;
+}
+
+{11}
+#include <stdio.h>
+
+int main() {
+    
+    int num1;
+    printf("Enter no.1 : ");
+    scanf("%d",&num1);
+    int num2;
+    printf("Enter no.2 : ");
+    scanf("%d",&num2);
+    int hcf;
+    int i;
+    
+    
+    for (i=2;i<=num1;i++){
+        if (num1%i==0 && num2%i==0){
+            hcf=i;
+        }
+    }
+    printf("%d",hcf);
+  
+    return 0;
+}
+
+{12}
+#include <stdio.h>
+
+int main() {
+    
+    int num1;
+    printf("Enter no.1 : ");
+    scanf("%d",&num1);
+    int num2;
+    printf("Enter no.2 : ");
+    scanf("%d",&num2);
+    int hcf;
+    int i;
+    
+    
+    for (i=2;i<=num1;i++){
+        if (num1%i==0 && num2%i==0){
+            hcf=i;
+        }
+    }
+    int lcm= (num1*num2)/hcf;
+    printf("%d",lcm);
+  
+    return 0;
+}
+
+{13}
+#include <stdio.h>
+
+int main() {
+   int year;
+   printf("Enter Year: ");
+   scanf("%d",&year);
+   
+   if((year % 4 ==0 && year % 100 !=0) || year % 400==0){
+       printf("year is leap");
+   }else {
+       printf("year is not leap");
+   }
+    
+    return 0;
+}
+
+{14}
+#include <stdio.h>
+
+int main() {
+    
+    int num1;
+    printf("Enter no.1 : ");
+    scanf("%d",&num1);
+    int num2;
+    printf("Enter no.2 : ");
+    scanf("%d",&num2);
+    char opp;
+    printf("Enter opretion: ");
+    scanf(" %c",&opp);
+    int result;
+    
+    if (opp=='+'){
+        result=num1+num2;
+    }else if(opp=='-'){
+        result=num1-num2;
+    }else if(opp=='*'){
+        result=num1*num2;
+    }else if(opp=='/'){
+        result=num1/num2;
+    }
+    printf("%d",result);
+    
+    return 0;
+}
+
+
+{15}
+#include <stdio.h>
+
+int main() {
+    int arr[]={1,2,3,4,5};
+    int len=sizeof(arr)/sizeof(arr[0]);
+    int count;   
+    int i;
+    
+    for (i=0;i<len;i++){
+        count=count+arr[i];
+    }
+    printf("%d",count);
+    
+    return 0;
+}
+
+{16}
+#include <stdio.h>
+
+int main() {
+    int arr[]={5,1,2,3,4};
+    int len=sizeof(arr)/sizeof(arr[0]);
+    int count;   
+    int i;
+    
+    for (i=0;i<len;i++){
+        if (arr[i]<arr[i+1]){
+            count=arr[i+1];
+        }
+    }
+    printf("%d",count);
+    
+    return 0;
+}
+
+{17}
+#include <stdio.h>
+
+int main() {
+    char str[]="abc";
+    int i;
+    int count=0;
+    for (i=0;str[i]!='\0';i++){
+        count++;
+    }
+    
+    printf("%d",count);
+    
+    return 0;
+}
+
+
+{18}
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[]="PARTH JADAV";
+    int i;
+    int count[10];
+    for (i=0;i<strlen(str);i++){
+        count[i]=str[strlen(str)-i-1];
+    }
+    for (i=0;i<strlen(str);i++){
+        printf("%c",count[i]);
+    }
+    
+    return 0;
+}
+
+{19}
+#include <stdio.h>
+
+int main() {
+    int a=2;
+    int b=1;
+    
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    printf("%d\n",a);
+    printf("%d",b);
+    return 0;
+}
+
+{20}
+#include <stdio.h>
+
+int main() {
+    int a=2;
+    int b=1;
+    int c;
+    c=a+b;
+    b=c-b;
+    a=c-a;
+    printf("%d\n",a);
+    printf("%d",b);
+    return 0;
+}
+
+{21}
+#include <stdio.h>
+
+int main() {
+    char ch;
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+
+    printf("ASCII value of '%c' is %d\n", ch, ch);
+
+    return 0;
+}
+
+
+{22}
+#include <stdio.h>
+
+int main() {
+    float c;
+    printf("Enter a celcius: ");
+    scanf("%f", &c);
+    
+    float fer;
+    fer=((9.0/5.0)*c)+32;
+
+    printf("%.1f", fer);
+
+    return 0;
+}
+
+{23}
+#include <stdio.h>
+
+int main() {
+    float fer;
+    printf("Enter a farenheit: ");
+    scanf("%f", &fer);
+    
+    float c;
+    c=(fer-32)*5.0/9.0;
+
+    printf("%.1f", c);
+
+    return 0;
+}
+
+
+{24}
+#include <stdio.h>
+
+int main() {
+    int num;
+    printf("Enter a num: ");
+    scanf("%d", &num);
+    
+    int c;
+    c=(num*(num+1))/2;
+
+    printf("%d", c);
+
+    return 0;
+}
+
+
+{25}
+#include <stdio.h>
+
+int main() {
+    char vov;
+    printf("Enter a vowels: ");
+    scanf("%c", &vov);
+    
+    if(vov=='a'|| vov=='e' || vov=='i' || vov=='o' || vov=='u'){
+        printf("%c is vovel",vov);
+    }else{
+        printf("%c is consonant",vov);
+    }
+
+    return 0;
+}
+
+
+{26}
+#include <stdio.h>
+
+int main() {
+    char a;
+    printf("Enter a alpha,digit or special char: ");
+    scanf("%c", &a);
+    
+    int p=("%d",a);
+    if (p>=65 && p<=90){
+        printf("alphabet");
+    }else if(p>=97 && p<=122){
+        printf("alphabet");
+    }else if(p>=48 && p<=57){
+        printf("digit");
+    }else {
+        printf("spc char");
+    }
+
+    
+    
+    return 0;
+}
+
+
+{27}
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int a;
+    printf("Enter a no. : ");
+    scanf("%d", &a);
+    char str[10];
+    
+    sprintf(str, "%d", a);
+    
+    printf("Number of digit are: %d",strlen(str));
+    
+    return 0;
+}
+
+
+{28}
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[]="PARTH JADAV";
+    int i;
+    int count[10];
+    for (i=0;i<strlen(str);i++){
+        count[i]=str[strlen(str)-i-1];
+    }
+    for (i=0;i<strlen(str);i++){
+        printf("%c",count[i]);
+    }
+    
+    return 0;
+}
+
+
+{29}
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str1[]="acd";
+    char str2[]="abcd";
+    
+    if (strcmp(str1,str2)<0){
+        printf("is in alpha");
+    }else if (strcmp(str1,str2)>0){
+        printf("is not in alpha");
+    }else {
+        printf("is equal");
+    }
+    
+    return 0;
+}
+
+
+{30}
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int n1;
+    printf("ENTER BASE NUMBER : ");
+    scanf("%d", &n1);
+    int n2;
+    printf("ENTER POWER NUMBER : ");
+    scanf("%d", &n2);
+    int count=1;
+    int i;
+    for (i=0;i<n2;i++){
+        count=count*n1;
+    }
+    printf("%d",count);
+    
+    return 0;
+}
+
+
+{31}
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    printf("ENTER NUMBER BETWEEN WHICH PRIME NUMBER YOU WANT\n");
+    int n1;
+    printf("FROM : ");
+    scanf("%d", &n1);
+    int n2;
+    printf("TO : ");
+    scanf("%d", &n2);
+    
+
+    int i,j;
+    for (i=n1;i<=n2;i++){
+        int count=0;
+        for (j=2;j<i;j++){
+            if (i%j==0){
+                count++;
+            }
+        }
+        if (count==0){
+            printf("%d\n",i);
+        }
+    }
+  
+    
+    return 0;
+}
+
+
+{32}
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+
+int main() {
+    int arm;
+    scanf("%d", &arm);
+    char str[10];
+    sprintf(str,"%d",arm);
+    int count=0;
+    int i;
+    
+    for(i=0;i<strlen(str);i++){
+        count=count+pow((str[i]-'0'),strlen(str));
+    }
+    if (arm==count){
+        printf("armstrong");
+    }else{
+        printf("not armstrong");
+    }
+    
+    
+    return 0;
+}
+
+{33}
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int arr[5]={1,2,3,4,5};
+    float len=sizeof(arr)/sizeof(arr[0]);
+    
+    int i=0;
+    float count=0;
+    for(i=0;i<len;i++){
+        count=count+arr[i];
+    }
+    
+    printf("%f",count/len);
+    
+    return 0;
+}
+
+{34}
+#include <stdio.h>
+
+int main(){
+    int arr[5]={3,1,4,1,5};
+    int len=sizeof(arr)/sizeof(arr[1]);
+    int num;
+    int i;
+    int j;
+    for (i=0;i<len;i++){
+        for (j=0;j<len-1;j++){
+            if (arr[j]>arr[j+1]){
+                num=arr[j+1];
+                arr[j+1]=arr[j];
+                arr[j]=num;
+            }
+            
+        }
+    }
+    for (i=0;i<len;i++){
+        printf("%d ",arr[i]);
+    }
+    printf("\n");
+    printf("%d",arr[len-2]);
+}
+
+{35}
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+
+int main() {
+    int num;
+    scanf("%d", &num);
+    int num1=sqrt(num);
+    
+    if(num1*num1==num){
+        printf("perfect square");
+    }
+    
+    return 0;
+}
+
+
